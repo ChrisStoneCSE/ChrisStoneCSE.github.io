@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+<meta charset="UTF-8">
+  
+<title>Grants Management</title>
+    <link rel="icon" type="image/png" href="images/faviconCSE.png" sizes="32x32">    
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400|Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href='src/style.css' rel='stylesheet' type='text/css'>   
+
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+</head>
+
+<body translate="no" >
+  <header>  
+    <div class="half"><img src="images/568px-NSF.svg.png" alt="Agency Logo" height="125" width="125"></div>
+    <div class="half"><h2 class="full"><em>Smart Contract for Grants</em></h2></div>
+   <!-- <h2 class="full"> Distributed Ledger: <em>goQuorum</em> &nbsp; Smart Contract: <em>0x2D2f6019CAc290294c05dBef7E04a73d527279ae</em></h2> -->
+    <h2 class="full"> 
+      <a href="index.html"><em>Home</em></a>&nbsp;&nbsp;&nbsp;
+      <a href="Onboard.html"><em>Onboard</em></a>&nbsp;&nbsp;&nbsp;
+      <a href="AwardGrant.html"><em></em>Award</em></a>&nbsp;&nbsp;&nbsp;
+      <a href="ViewGrants.html"><em></em>View All</em></a>&nbsp;&nbsp;&nbsp;
+      <a href="Security.html"><em></em>Security</em></a>&nbsp;&nbsp;&nbsp;
+      <a href="Treasury.html"><em></em>Treasury</em></a>&nbsp;&nbsp;&nbsp;
+      <a id="auditLink" href="index.html" target=_blank><em></em>Audit</em></a>
+    </h2>
+  </header>
+  <br>
+  <br>
+  <br>
+    &nbsp;
+  <!-- <h4> -->
+      <p>
+        A key feature of blockchain architecture are smart contracts, which allow digitized agreement terms and conditions to be self-executed once the predefined rules between parties are met. This Web3 distributed application ("dApp") creates a smart contract for each grant letter to automate enforcement of spending controls and payment rules and simplifies reporting. This is a fully functioning proof-of-concept to prove that it is possible to adapt this functionality to create smart grants and indicates blockchain could transform government operations by tackling some of government financial management’s biggest challenges, especially those concerning internal controls. It confirms two notions: 1) blockchain can improve the detection and prevention of improper payments; and 2) blockchain can reduce the reporting burden for grant recipients.
+      </p>
+      <br>
+      <br>
+      <br>
+      <p>
+        Welcome to the future, and get ready to <a href="Onboard.html">Onboard!</a> 
+      </p>
+  <!-- </h4> -->
+<br>
+<br>
+<br>
+<br>
+  
+<!-- <table class="full">
+  <th>Tools and Scaffolding</th>
+  <th>Implementation</th>
+  <th>Rationale</th>
+  <tr>
+    <td>Smart Contract Language</td>
+    <td><img src="images/logos/solidity.jpeg" alt="Solidity" height="125"></td>
+    <td>This is the rationale.</td>
+
+  <tr>
+    <td>Web3 Wallet</td>
+    <td><img src="images/logos/MetaMask.jpeg" alt="MetaMask" height="125"></td>
+    <td>This is the rationale.</td>  </tr>
+  <tr>
+    <td>CI/CD Pipeline</td>
+    <td><img src="images/logos/Truffle.jpeg" alt="Truffle" height="125"> </td>
+    <td>This is the rationale.</td>  </tr>
+  <tr>
+    <td>Security Scans</td>
+    <td><img src="images/logos/MythX.jpeg" alt="MythX" height="125"></td>
+    <td>This is the rationale.</td>  </tr>
+  <tr>
+    <td>Blockchain</td>
+    <td><img src="images/logos/Quorum.jpeg" alt="Quorum" height="125"></td>
+    <td>This is the rationale.</td>  </tr>
+  <tr>
+    <td>Token</td>
+    <td><img src="images/logos/ERC-20.jpeg" alt="ERC-20" height="125"></td>
+    <td>This is the rationale.</td>  </tr>
+  <tr>
+    <td>Consensus Mechanism</td>
+    <td><img src="images/logos/Raft.jpeg" alt="Raft" height="125"></td>
+    <td>This is the rationale.</td>  
+  </tr>
+</table> -->
+
+
+<form>    
+  <div class="form-group">
+    <h2 class="heading full">Technology Stack</h2>
+    <div class="controls full">
+
+      <img src="images/logos/TechStack.png" alt="Tech Stack" height="400">
+
+    </div>
+
+  </div>
+ </form>
+
+
+
+
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      
+<script id="rendered-js" >
+// Added input value check on postback/load, removed floatLabel class from select input. Modified the scss, added color map.
+
+(function ($) {
+  function floatLabel(inputType) {
+    $(inputType).each(function () {
+      var $this = $(this);
+      var text_value = $(this).val();
+
+      // on focus add class "active" to label
+      $this.focus(function () {
+        $this.next().addClass("active");
+      });
+
+      // on blur check field and remove class if needed
+      $this.blur(function () {
+        if ($this.val() === '' || $this.val() === 'blank') {
+          $this.next().removeClass();
+        }
+      });
+
+      // Check input values on postback and add class "active" if value exists
+      if (text_value != '') {
+        $this.next().addClass("active");
+      }
+    });
+
+    // Automatically remove floatLabel class from select input on load
+    $("select").next().removeClass();
+  }
+  // Add a class of "floatLabel" to the input field
+  floatLabel(".floatLabel");
+})(jQuery);
+//# sourceURL=pen.js
+    </script>
+  
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+</body>
+<script src="src/dappWeb3.js"></script>
+<script src="src/dapp.js"></script>
+<script language="javascript"><!--
+  function myFunction() {
+      // Do stuff
+  }
+//--></script>
+</html>
+ 
+
